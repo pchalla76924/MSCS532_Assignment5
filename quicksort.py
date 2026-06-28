@@ -112,4 +112,24 @@ def run_empirical_test():
 
 
 if __name__ == "__main__":
+    # keep your existing benchmark untouched
+    print("Running empirical test...\n")
     run_empirical_test()
+
+    # -----------------------------
+    # Static dataset
+    # -----------------------------
+    sample_data = [42, 15, 73, 8, 65, 29, 91, 34, 50, 11]
+
+    print("\n--- Static Dataset Demonstration ---")
+    print("Original Data:", sample_data)
+
+    # Deterministic version
+    data_det = sample_data.copy()
+    deterministic_quicksort(data_det)
+    print("\nDeterministic Quicksort Output:", data_det)
+
+    # Randomized version
+    data_rand = sample_data.copy()
+    randomized_quicksort(data_rand)
+    print("\nRandomized Quicksort Output:", data_rand)
